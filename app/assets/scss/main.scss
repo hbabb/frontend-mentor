@@ -1,0 +1,17 @@
+@use "~/assets/scss/partials/_fonts.scss";
+@use "~/assets/scss/partials/_reset.scss";
+
+/* Global Styles */
+.layout {
+  min-height: 100dvh;
+  width: 100%;
+}
+// body {
+//   min-height: 100dvh;
+//   width: 100%;
+// }
+
+.main {
+  width: 100%;
+  height: auto;
+}
