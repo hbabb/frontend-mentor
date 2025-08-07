@@ -439,7 +439,8 @@ a,
 }
 
 .cta {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-self: stretch;
@@ -528,7 +529,7 @@ a,
       background-position: center;
       background-repeat: no-repeat;
       padding: $space-1400 $space-1000;
-      gap: -1.75rem;
+      width: 100%;
 
       &__content {
         display: flex;
