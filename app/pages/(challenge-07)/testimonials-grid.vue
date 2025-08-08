@@ -1,3 +1,7 @@
+<script setup lang="ts">
+definePageMeta({ layout: "challenge" });
+</script>
+
 <template>
   <div class="container">
     <article class="card card-1">

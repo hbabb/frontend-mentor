@@ -1,5 +1,23 @@
 <script setup lang="ts">
 import { projects } from "~/lib/projects";
+
+if (import.meta.server) {
+  useSeoMeta({
+    robots: "index, follow",
+    title: "Frontend Mentor Projects",
+    description: "A collection of Frontend Mentor challenge projects built with Nuxt by Heath Babb of TechSolvd.",
+    ogTitle: "Frontend Mentor Projects | Heath Babb",
+    ogDescription: "A collection of Frontend Mentor challenge projects built with Nuxt by Heath Babb of TechSolvd.",
+    twitterCard: "summary_large_image",
+    twitterTitle: "Frontend Mentor Projects | Heath Babb",
+    twitterDescription: "A collection of Frontend Mentor challenge projects built with Nuxt by Heath Babb of TechSolvd.",
+  });
+};
+
+defineOgImageComponent("ogImageTemplate", {
+  title: "Frontend Mentor Projects | Heath Babb",
+  description: "A collection of Frontend Mentor challenge projects built with Nuxt by Heath Babb of TechSolvd.",
+});
 </script>
 
 <template>
