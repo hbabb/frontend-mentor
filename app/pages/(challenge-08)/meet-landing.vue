@@ -39,10 +39,18 @@ definePageMeta({ layout: "challenge" });
           Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
         </p>
         <div class="hero__action__btn-group">
-          <a href="#" class="btn blue text-preset-5">
+          <a
+            href="#"
+            class="btn blue text-preset-5"
+            aria-label="Download version 1.3 of the software"
+          >
             Download <span>v1.3</span>
           </a>
-          <a href="#" class="btn purple text-preset-5">
+          <a
+            href="#"
+            class="btn purple text-preset-5"
+            aria-label="Learn more about what this software is"
+          >
             What is it?
           </a>
         </div>
@@ -99,7 +107,7 @@ definePageMeta({ layout: "challenge" });
         </p>
       </div>
     </section>
-    <footer class="cta">
+    <section class="cta">
       <div class="cta__head">
         <div class="cta__head__line" />
         <p class="cta__head__number text-preset-5">
@@ -114,13 +122,17 @@ definePageMeta({ layout: "challenge" });
           <p class="cta__hero__content__description text-preset-4">
             Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
           </p>
-          <a href="#" class="cta__hero__content__btn btn purple text-preset-5">
+          <a
+            href="#"
+            class="cta__hero__content__btn btn purple text-preset-5"
+            aria-label="Download version 1.3 of the software"
+          >
             <p class="cta__hero__content__btn__text text-preset-5">Download</p>
             <p class="cta__hero__content__btn__version text-preset-5">v1.3</p>
           </a>
         </div>
       </div>
-    </footer>
+    </section>
   </div>
 </template>
 

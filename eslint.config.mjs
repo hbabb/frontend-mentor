@@ -20,7 +20,7 @@ export default withNuxt(
       arrowParens: "always",
       linebreaks: "unix",
     },
-    ignores: [".pnpm-store/**", "node_modules/**", "**/migrations/*"],
+    ignores: [".pnpm-store/**", "node_modules/**", "**/migrations/*", "docs/**"],
   }, {
     rules: {
       "vue/max-attributes-per-line": ["error", {
