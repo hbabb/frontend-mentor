@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  weather-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: weather-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - weather-network
+
+  weather-app-dev:
+    image: docker.io/oven/bun:latest
+    container_name: weather-app-dev
+    working_dir: /app
+    volumes:
+      - .:/app:Z
+      - weather-app-node-modules:/app/node_modules
+    ports:
+      - "4200:4200"
+    command: sh -c "bun install && bun run start -- --host 0.0.0.0"
+    environment:
+      - NODE_ENV=development
+      - NG_CLI_ANALYTICS=false
+    networks:
+      - weather-network
+    stdin_open: true
+    tty: true
+
+volumes:
+  weather-app-node-modules:
+
+networks:
+  weather-network:
+    driver: bridge

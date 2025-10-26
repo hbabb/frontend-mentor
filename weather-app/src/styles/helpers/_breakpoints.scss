@@ -1,0 +1,19 @@
+@use 'functions';
+@use 'sass:map';
+
+$breakpoints: (
+  mobile: functions.rem(576),
+  tablet: functions.rem(768),
+  desktop: functions.rem(1200),
+);
+
+@mixin breakpoint($size) {
+  @if map.has-key($breakpoints, $size) {
+    $value: map.get($breakpoints, $size);
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{size}' not found in breakpoints map.";
+  }
+}
