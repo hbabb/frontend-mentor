@@ -2,7 +2,18 @@
   "name": "@weather-app/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev:app": "nx server web",
+    "dev:api": "nx serve api",
+    "dev": "nx run-many -t serve -p api web",
+    "build": "nx run-many -t build -p api web",
+    "test": "nx run-many -t test",
+    "test:e2e": "nx run-many -t e2e",
+    "lint": "nx run-many -t lint",
+    "lint:fix": "nx run-many -t lint -- --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~20.3.0",
